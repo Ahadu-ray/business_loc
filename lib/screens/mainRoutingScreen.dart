@@ -16,10 +16,9 @@ class _MainRoutingScreenState extends State<MainRoutingScreen> {
   List<Widget> _children = [HomeScreen(), SearchScreen(), ProfileScreen()];
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
-      body: SingleChildScrollView(
-        child: _children[_selectedIndex],
-      ),
+      body: Container(height: size.height, child: _children[_selectedIndex]),
       bottomNavigationBar: BottomNavigationBar(
         elevation: 40,
         selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
@@ -27,6 +26,7 @@ class _MainRoutingScreenState extends State<MainRoutingScreen> {
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.home_outlined,
+                size: 30,
               ),
               label: "home"),
           BottomNavigationBarItem(
