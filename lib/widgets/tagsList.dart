@@ -30,7 +30,7 @@ class TagsList extends StatelessWidget {
               color: Colors.white,
               borderRadius: BorderRadius.circular(50),
               boxShadow: [
-                BoxShadow(color: customThemeData.accentColor, blurRadius: 3),
+                BoxShadow(color: customThemeData.accentColor, blurRadius: 1),
               ],
             ),
             height: 80,
